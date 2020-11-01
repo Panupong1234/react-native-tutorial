@@ -1,11 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import HomePage from './Home'
+import ActionComponent from "./Action";
+import ProfileComponent from "./Profile";
+import TopicComponent from "./Topic";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <div className="content">
+        <ProfileComponent />
+        <TopicComponent />
+      </div>
     </div>
   );
 }

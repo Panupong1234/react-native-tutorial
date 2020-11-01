@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import GHBButton from './GHBButton'
+import { ButtonGHB } from "./component/ui";
 
-class Home extends React.Component {
+class ActionComponent extends React.Component {
   state = {
     total: 0,
   };
+
+  handleIncrement() {
+    this.setState({ total: this.state.total + 1 });
+  }
 
   render() {
     return (
       <div>
         <h1>{this.state.total}</h1>
         <div>
-          <GHBButton
+          <ButtonGHB
             onClick={() => {
-              this.setState({ total: this.state.total + 1 });
+              this.handleIncrement();
             }}
             text="Increment"
           />
@@ -30,4 +34,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default ActionComponent;

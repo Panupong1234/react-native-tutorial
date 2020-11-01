@@ -1,6 +1,6 @@
 import React from "react";
 
-class GHBButton extends React.Component {
+export class ButtonGHB extends React.Component {
   render() {
     return (
       <button
@@ -21,4 +21,3 @@ class GHBButton extends React.Component {
   }
 }
 
-export default GHBButton;

@@ -15,27 +15,27 @@
 
 
 
-// // Promise
-// (() => {
-//   const getData = (req) => {
-//     console.log("req ===> ", JSON.stringify(req));
-//     return new Promise((resolve, reject) => {
-//       if (!req)
-//         return setTimeout(() => {
-//             reject({ status: false });
-//         }, 2000);
+// Promise
+(() => {
+  const getData = (req) => {
+    console.log("req ===> ", JSON.stringify(req));
+    return new Promise((resolve, reject) => {
+      if (!req)
+        return setTimeout(() => {
+            reject({ status: false });
+        }, 2000);
 
-//       setTimeout(() => {
-//         resolve({ status: true });
-//       }, 2000);
-//     });
-//   };
+      setTimeout(() => {
+        resolve({ status: true });
+      }, 2000);
+    });
+  };
 
-//   getData()
-//     .then((response) => {
-//       console.log("response ===> ", response);
-//     })
-//     .catch((errors) => {
-//       console.error("errors ===> ", errors);
-//     });
-// })();
+  getData()
+    .then((response) => {
+      console.log("response ===> ", response);
+    })
+    .catch((errors) => {
+      console.error("errors ===> ", errors);
+    });
+})();

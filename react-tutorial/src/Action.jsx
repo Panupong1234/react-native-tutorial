@@ -3,7 +3,7 @@ import { ButtonGHB } from "./component/ui";
 
 class ActionComponent extends React.Component {
   state = {
-    total: 0,
+    total: 10,
   };
 
   handleIncrement() {
@@ -13,21 +13,24 @@ class ActionComponent extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.state.total}</h1>
+        <h1>Total : {this.state.total}</h1>
         <div>
+
           <ButtonGHB
-            onClick={() => {
-              this.handleIncrement();
+            text='Increment'
+            handleClick={()=>{
+              this.setState({total: this.state.total + 1})
             }}
-            text="Increment"
+            total={this.state.total}
           />
-          <button
-            onClick={() => {
-              this.setState({ total: this.state.total - 1 });
+
+          <ButtonGHB
+            text='Decrement'
+            handleClick={()=>{
+              this.setState({total: this.state.total - 1})
             }}
-          >
-            Decrement
-          </button>
+          />
+
         </div>
       </div>
     );
